@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+<channel>
+<title>Blog</title>
+<link>https://lemux.one/</link>
+<description>Stay tune with Lemux's most recent posts</description>
+
+<item>
+<title>Welcome to my corner</title>
+<link>https://lemux.one/blog/welcome-to-my-corner/</link>
+<description>
+<![CDATA[
+<p>
+Hello! This is my very modest way to introduce myself. I will be posting (or at least I will try to do so) about my&nbsp;<a href="https://lemux.one/blog/welcome-to-my-corner/">...</a>
+</p>
+<p><a href="https://lemux.one/blog/welcome-to-my-corner/">Read More</a></p>
+]]>
+</description>
+<pubDate>Sat, 24 Sep 2022 00:00:00 +0000</pubDate>
+</item>
+
+
+</channel>
+</rss>
