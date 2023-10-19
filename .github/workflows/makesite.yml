@@ -1,9 +1,6 @@
 name: Build with makesite.py and deploy to Pages
 
 on:
-  pull_request:
-    branches: ["main"]
-
   workflow_dispatch:
 
 permissions:
