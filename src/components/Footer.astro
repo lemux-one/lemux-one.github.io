@@ -1,12 +1,23 @@
 ---
-const platform = "github";
-const username = "lemux-one";
+import Social from "../components/Social.astro";
+const socialInfo = [
+  { platform: "github", username: "lemux-one" },
+  { platform: "twitter", username: "lemux_one" },
+];
 ---
 
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
+
 <footer>
-  <p>
-    Learn more about my projects on <a
-      href={`https://www.${platform}.com/${username}`}>{platform}</a
-    >!
-  </p>
+  {
+    socialInfo.map((item) => {
+      return <Social platform={item.platform} username={item.username} />;
+    })
+  }
 </footer>
