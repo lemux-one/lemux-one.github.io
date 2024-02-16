@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPostItem from "../components/BlogPostItem.astro";
 const posts = await Astro.glob("./posts/*.md");
 const pageTitle = "My Astro Learning Blog";
 ---
@@ -9,11 +10,7 @@ const pageTitle = "My Astro Learning Blog";
   <ul>
     {
       posts?.map((post) => {
-        return (
-          <li>
-            <a href={post.url}>{post.frontmatter.title}</a>
-          </li>
-        );
+        return <BlogPostItem url={post.url} title={post.frontmatter.title} />;
       })
     }
   </ul>
