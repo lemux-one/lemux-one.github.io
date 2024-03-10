@@ -1,15 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const pageTitle = "About Page";
+const pageTitle = "About ...";
 const identity = {
   firstName: "Luis",
   country: "USA",
   occupation: "Software Engineer",
   hobbies: ["scrolling", "family", "curiosity"],
 };
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "TypeScript"];
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "TypeScript", "Python"];
 const happy = true;
-const finished = false;
 const goal = 3;
 const skillColor = "navy";
 const fontWeight = "bold";
@@ -28,17 +27,15 @@ const textCase = "uppercase";
       text-transform: var(--textCase);
     }
   </style>
-  
-  <h2>... and my new Astro site!</h2>
+
+  <h2>... me!</h2>
 
   <p>
-    I am working through Astro's introductory tutorial. This is the second page
-    on my website, and it's the first one I built myself!
-  </p>
-
-  <p>
-    This site will update as I complete more of the tutorial, so keep checking
-    back and see how my journey is going!
+    I am a software engineer/developer with a solid background in full stack web
+    development. I've been able to participate in the creation of quite
+    different software solutions in my career, from intranets to GIS
+    applications, including (but not limited to) institutional blogs, webapps
+    for small enterprise management and a couple of desktop oriented systems.
   </p>
 
   <p>Here are a few facts about me:</p>
@@ -60,13 +57,11 @@ const textCase = "uppercase";
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
 
-  {happy && <p>I am happy to be learning Astro!</p>}
-
-  {finished && <p>I finished this tutorial!</p>}
+  {happy && <p>I am happy to be a forever learner!</p>}
 
   {
     goal === 3 ? (
-      <p>My goal is to finish in 3 days.</p>
+      <p>My goal is to keep pushing my limits.</p>
     ) : (
       <p>My goal is not 3 days.</p>
     )
