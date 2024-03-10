@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "About ...";
+const identity = {
+  firstName: "Luis",
+  country: "USA",
+  occupation: "Software Engineer",
+  hobbies: ["scrolling", "family", "curiosity"],
+};
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "TypeScript", "Python"];
+const happy = true;
+const goal = 3;
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <style define:vars={{ skillColor, fontWeight, textCase }}>
+    h1 {
+      color: purple;
+      font-size: 4rem;
+    }
+    .skill {
+      color: var(--skillColor);
+      font-weight: var(--fontWeight);
+      text-transform: var(--textCase);
+    }
+  </style>
+
+  <h2>... me!</h2>
+
+  <p>
+    I am a software engineer/developer with a solid background in full stack web
+    development. I've been able to participate in the creation of quite
+    different software solutions in my career, from intranets to GIS
+    applications, including (but not limited to) institutional blogs, webapps
+    for small enterprise management and a couple of desktop oriented systems.
+  </p>
+
+  <p>Here are a few facts about me:</p>
+  <ul>
+    <li>My name is {identity.firstName}.</li>
+    <li>
+      I live in {identity.country} and I work as a {identity.occupation}.
+    </li>
+    {
+      identity.hobbies.length >= 2 && (
+        <li>
+          Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
+        </li>
+      )
+    }
+  </ul>
+  <p>My skills are:</p>
+  <ul>
+    {skills.map((skill) => <li class="skill">{skill}</li>)}
+  </ul>
+
+  {happy && <p>I am happy to be a forever learner!</p>}
+
+  {
+    goal === 3 ? (
+      <p>My goal is to keep pushing my limits.</p>
+    ) : (
+      <p>My goal is not 3 days.</p>
+    )
+  }
+</BaseLayout>
