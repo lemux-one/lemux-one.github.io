@@ -12,8 +12,12 @@ const { frontmatter } = Astro.props;
     frontmatter.image?.url ? (
       <img
         src={frontmatter.image.url}
-        width="300"
-        alt={frontmatter.image.alt ? frontmatter.image.alt : "Image with no alt text"}
+        width="680"
+        alt={
+          frontmatter.image.alt
+            ? frontmatter.image.alt
+            : "Image with no alt text"
+        }
       />
     ) : null
   }

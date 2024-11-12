@@ -2,14 +2,24 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import BlogPostItem from "../components/BlogPostItem.astro";
 const posts = await Astro.glob("./posts/*.md");
+const mostRecentFirstPosts = posts?.sort((a, b) =>
+  a.frontmatter.pubDate > b.frontmatter.pubDate ? -1 : 1
+);
 const pageTitle = "My Astro Learning Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
   <ul>
     {
-      posts?.map((post) => {
-        return <BlogPostItem url={post.url} title={post.frontmatter.title} />;
+      mostRecentFirstPosts?.map((post) => {
+        return (
+          <BlogPostItem
+            url={post.url}
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+            pubDate={post.frontmatter.pubDate}
+          />
+        );
       })
     }
   </ul>

@@ -1,7 +1,10 @@
 ---
-const { url, title } = Astro.props;
+const { url, title, description, pubDate } = Astro.props;
+const shorDate = new Date(pubDate).toLocaleDateString();
 ---
 
 <li>
   <a href={url}>{title}</a>
+  <div>Published on: {shorDate}</div>
+  <div>{description}</div>
 </li>
