@@ -5,7 +5,7 @@ const posts = await Astro.glob("./posts/*.md");
 const mostRecentFirstPosts = posts?.sort((a, b) =>
   a.frontmatter.pubDate > b.frontmatter.pubDate ? -1 : 1
 );
-const pageTitle = "My Astro Learning Blog";
+const pageTitle = "Latest posts";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
